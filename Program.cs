@@ -134,7 +134,15 @@ while (true)
                 Console.WriteLine("Введите название записи, которую хотите просмотреть:");
                 string checkTitle = Console.ReadLine();
                 Console.Clear();
-                Console.WriteLine($"Полученнная запись: {workWithRecords.ContainsTitle(checkTitle)}");
+                Record? checkRecord = workWithRecords.ContainsTitle(checkTitle);
+                if (checkRecord != null) 
+                {
+                    Console.WriteLine($"Полученнная запись: {checkRecord}");
+                }
+                else
+                {
+                    throw new ArgumentException("Такой записи не существует");
+                }
                 
             }
             catch (Exception ex)
