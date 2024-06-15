@@ -10,6 +10,7 @@ public class WorkWithRecords
 {
     private List<Record> records_;
 
+    //папка appdata, поменять если нужно
     public string StoragePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Records.txt");
         
     public WorkWithRecords()
